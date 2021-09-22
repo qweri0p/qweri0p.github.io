@@ -5,16 +5,23 @@
             NOT SCAM HERE!!!
         </title>
         <script>
-            function scamButton() {
-                alert('HELO MY NAAME IS WINDOWS TEK SUPPPORT');
-                document.getElementById("scamButton").innerHTML = "CLICK TO RESOLVE VIRUS";
+            var first_click = true;
+            astley = function() {
+                if (first_click) {
+                    // do stuff for first click
+                    alert('HELO MY NAAME IS WINDOWS TEK SUPPPORT');
+                    document.getElementById("scamButton").innerHTML = "CLICK TO RESOLVE VIRUS";
+                first_click = false;
+                } else {
+                // do stuff for second click
                 document.getElementById("scamButton").onclick = location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                }
             }
         </script>
     </head>
     <body>
         <p>
-            <button type="button" onclick="scamButton()" id="scamButton">
+            <button type="button" onclick="astley()" id="scamButton">
                 CLICK HERE FOR MINECRAFT FREE DOWNLOAD NO VIRUS
             </button>
         </p>
