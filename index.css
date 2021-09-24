@@ -1,0 +1,18 @@
+.sidebar {
+    display: block;
+    font-family: Source Code Pro;
+    height: fit-content;
+    width: 55px;
+    border: green;
+    border-style: solid;
+    padding: 10px;
+    margin:10px;
+    background-color:cyan;
+}
+.gamer {
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    font-family: Comic Sans MS;
+    font-size: 50px;
+}

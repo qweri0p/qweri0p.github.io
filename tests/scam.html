@@ -8,21 +8,22 @@
             var first_click = true;
             astley = function() {
                 if (first_click) {
-                    // do stuff for first click
-                    alert('HELO MY NAAME IS WINDOWS TEK SUPPPORT');
                     document.getElementById("scamButton").innerHTML = "CLICK TO RESOLVE VIRUS";
-                first_click = false;
+                    document.getElementById("scamImage").src = "../images/fakescam.jpg";
+                    document.getElementById("scamBody").style = "background-image: url(../images/warning.jpg);";
+                    alert('WINDOWS IS IN DAGNER!!!!!!!!!!!!!');
+                    first_click = false;
                 } else {
-                // do stuff for second click
-                document.getElementById("scamButton").onclick = location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+                    location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';
                 }
             }
         </script>
     </head>
-    <body>
+    <body style="background-image: url(../images/scuffedBackground.jpg);" id="scamBody">
         <p>
-            <button type="button" onclick="astley()" id="scamButton">
-                CLICK HERE FOR MINECRAFT FREE DOWNLOAD NO VIRUS
+            <img src="../images/shitmc.jpg" alt="funny" id="scamImage" style="width: 600px; position:fixed; left: 25%;"><br><br>
+            <button type="button" onclick="astley()" id="scamButton" style="color: green; position:relative; top:350px; left: 25%;">
+                CLICK HERE FOR MINECRAFT FREE DOWNLOAD NO VIRUS NOW 100%
             </button>
         </p>
     </body>
