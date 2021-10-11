@@ -1,0 +1,27 @@
+.symbol  {
+  position: relative; 
+  width: 30px;
+  left: 30px;
+  padding: 35px;
+  color: white;
+  font-size: 35px;
+  font-family: monospace;
+} 
+.tier {
+  position:relative;
+  top: -580px;
+  left: 95px;
+  width: 1000px;
+  height: 110px;
+  margin: 35px;
+}
+.light {
+  background-color:#1F1F1F;
+}
+.dark {
+  background-color: #151515;
+}
+img {
+  width: 110px;
+  height: 110px;
+}
