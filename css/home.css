@@ -1,6 +1,6 @@
-.sidebar {
+#sidebar {
     display: block;
-    font-family: Source Code Pro;
+    font-family: Comic Sans MS;
     height: fit-content;
     width: 55px;
     border: green;
@@ -9,10 +9,16 @@
     margin:10px;
     background-color:cyan;
 }
-.gamer {
+#gamer {
     position: relative;
     bottom: 100px;
     left: 100px;
-    font-family: Comic Sans MS;
-    font-size: 50px;
+    font-family: monospace;
+    font-size: 15px;
+}
+#list {
+    position: relative;
+    bottom: 100px;
+    left: 100px;
+    width: 80%;
 }
