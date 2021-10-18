@@ -1,0 +1,21 @@
+body {
+    font-family: Verdana;
+    background-color: #282a36;
+    color: #f8f8f2;
+}
+#menu {
+    display: block;
+    height: fit-content;
+    width: 80px;
+    padding: 5px;
+    border-style: solid;
+    margin: 5px ;
+    background-color: #44475a;
+
+}
+#menu a {
+    color: #f8f8f2;
+}
+span {
+    color: #6272a4;
+}
