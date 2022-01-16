@@ -1,6 +1,6 @@
-var gameover = false, score = 0, speed = 1000;
+var gameover = false, score = 0, started = false, timerval = 200;
 if (localStorage.highscore) {
-  var highscore = localStorage.getItem('highscore');
+  var highscore = Number(localStorage.getItem('highscore'));
 } else {
   var highscore = 0
 }
@@ -73,6 +73,11 @@ class tile {
 function preload() {
     font = loadFont('font.ttf');
 }
+function detectCheaters() {
+  if (mouseX > 600 || mouseX == 0 || mouseY > 600 || mouseY == 0) {
+    gameover = true
+  }
+}
 function setup() {
   createCanvas(600, 650);
   textFont(font);
@@ -90,27 +95,39 @@ function draw() {
   if (gameover == true) {
     background(220)
     fill(0);
-    textSize(50);
     textAlign(CENTER, CENTER);
-    text('score: '+ score, 300, 400)
-    text('highscore: '+ highscore, 300, 450)
     textSize(250);
     text('GAME', 300, 100)
     text('OVER', 300, 250)
-    if (score >> highscore) {
+    textSize(50);
+    if (score > highscore) {
       highscore = score;
-      localStorage.setItem('highscore', highscore)
+      text('score: '+ score, 300, 400)
+      text('highscore: '+ score, 300, 450)
+      localStorage.setItem('highscore', Number(highscore))
+    } else {
+      text('highscore: '+ highscore, 300, 450)
+      text('score: '+ score, 300, 400)
     }
   } else {
     fill(0);
     textSize(50);
-    textAlign(LEFT, LEFT);
+    textAlign(LEFT, BOTTOM);
     text('score: '+ score, 0, 645)
     text('highscore: '+ highscore, 300, 645)}
+  if (timerval > 0) {
+    background(220)
+    textAlign(CENTER, CENTER);
+    textSize(250);
+    timerval--;
+    text(Math.round(timerval), 300, 300)
+  } else {
+    started = true;
+  }
 }
 setInterval(function() {
   background(220)
-  if (gameover == false) {
+  if (gameover == false && started == true) {
   tile1.doAll()
   tile2.doAll()
   tile3.doAll()
@@ -120,10 +137,10 @@ setInterval(function() {
   tile7.doAll()
   tile8.doAll()
   tile9.doAll()
-  score += 1;
-  speed -=1}
-}, speed);
+  score += 1;}
+}, 1000);
 setInterval(function() {
+  if (gameover == false && started == true) {
   tile1.checkGameOver()
   tile2.checkGameOver()
   tile3.checkGameOver()
@@ -133,4 +150,5 @@ setInterval(function() {
   tile7.checkGameOver()
   tile8.checkGameOver()
   tile9.checkGameOver()
+  detectCheaters()}
 }, 100);
