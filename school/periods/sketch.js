@@ -1,4 +1,4 @@
-var gameover = false, score = 0, started = false, timerval = 200, resetHelper = 1;
+var gameover = false, score = 0, started = false, timerval = 200, resetHelper = 1, diffOffset = 0;
 if (localStorage.highscore) {
   var highscore = Number(localStorage.getItem('highscore'));
 } else {
@@ -26,7 +26,7 @@ class tile {
   }
   resetValue() {
     if (this.val == -1) {
-      this.val = Math.round(random(3, 9))
+      this.val = Math.round(random(3, 9-diffOffset))
     }   
   }
   changeColors() {
@@ -174,3 +174,6 @@ setInterval(function() {
   tile9.checkGameOver()
   detectCheaters()}
 }, 100);
+setInterval(function() {
+  diffOffset++
+}, 30000)
