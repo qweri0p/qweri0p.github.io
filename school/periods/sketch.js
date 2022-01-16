@@ -1,4 +1,4 @@
-var gameover = false, score = 0, started = false, timerval = 200;
+var gameover = false, score = 0, started = false, timerval = 200, resetHelper = 1;
 if (localStorage.highscore) {
   var highscore = Number(localStorage.getItem('highscore'));
 } else {
@@ -79,7 +79,7 @@ function detectCheaters() {
   }
 }
 function setup() {
-  createCanvas(600, 650).parent('game');
+  createCanvas(600, 650);
   textFont(font);
   tile1 = new tile(0, 0)
   tile2 = new tile(200, 0)
@@ -94,6 +94,12 @@ function setup() {
 function draw() {
   if (gameover == true) {
     background(220)
+    if (resetHelper ==1) {
+      button = createButton('Reset')
+      button.position(300, 550)
+      button.mousePressed(reset)
+      resetHelper -= 1
+    }
     fill(0);
     textAlign(CENTER, CENTER);
     textSize(250);
@@ -124,6 +130,22 @@ function draw() {
   } else {
     started = true;
   }
+}
+function reset() {
+  gameover = false
+  started = false
+  timerval = 200
+  tile1 = new tile(0, 0)
+  tile2 = new tile(200, 0)
+  tile3 = new tile(400, 0)
+  tile4 = new tile(0, 200)
+  tile5 = new tile(200, 200)
+  tile6 = new tile(400, 200)
+  tile7 = new tile(0, 400)
+  tile8 = new tile(200, 400)
+  tile9 = new tile(400, 400)
+  score = 0
+  button.remove()
 }
 setInterval(function() {
   background(220)

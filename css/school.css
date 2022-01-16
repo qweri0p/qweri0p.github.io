@@ -12,7 +12,6 @@ body {
     margin: 5px ;
     background-color: #44475a;
     float: left;
-
 }
 #menu a {
     color: #f8f8f2;
@@ -28,11 +27,22 @@ table, th, td {
     display: block;
     height: 650px;
     width: 600px;
-    float: right;
+    float: left;
 }
 #container {
     position: fixed;
-    width: 80%;
+    width: 100%;
     padding: 0;
     margin: 0;
+}
+@font-face {
+    font-family: mario;
+    src: url(../school/periods/font.ttf);
+}
+#uitleg {
+    display: block;
+    float: left;
+    font-family: mario;
+    width: 250px;
+    font-size: 25px;
 }
