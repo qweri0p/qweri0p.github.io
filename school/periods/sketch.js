@@ -145,7 +145,6 @@ function reset() {
   tile8 = new tile(200, 400)
   tile9 = new tile(400, 400)
   score = 0
-  button.remove()
 }
 setInterval(function() {
   background(220)
