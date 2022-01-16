@@ -79,7 +79,7 @@ function detectCheaters() {
   }
 }
 function setup() {
-  createCanvas(600, 650);
+  createCanvas(600, 650).parent('game');
   textFont(font);
   tile1 = new tile(0, 0)
   tile2 = new tile(200, 0)
