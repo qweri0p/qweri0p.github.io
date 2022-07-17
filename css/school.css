@@ -3,6 +3,52 @@ body {
     background-color: #282a36;
     color: #f8f8f2;
 }
+
+a:link {
+    color: #06ff06;
+}
+a:visited {
+    color: #2fa12f;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    border: 0;
+}
+
+#grid {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+.grid-container {
+    float: none;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 15px;
+    margin: 10px;
+    border: #06ff06 solid 2px;
+    margin-left: 175px;
+    margin-right: 175px;
+    padding-right: 100px;
+    padding-left: 100px;
+}
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; }
+.item5 { grid-area: footer; }
 #menu {
     display: block;
     height: fit-content;

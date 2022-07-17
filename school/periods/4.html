@@ -17,8 +17,28 @@
             <li><a href="4.html">Periode 4</a></li>
             </ul>
         </div>
-        <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, laudantium ullam voluptatibus molestiae saepe dolores vero. Corrupti, ipsam eaque. Placeat autem consectetur voluptatibus laborum esse repudiandae excepturi, iste distinctio repellendus!
-        </p>
+        <div class="grid-container">
+            <h1 class="item1">Rubiks cube solver</h1>
+            <p class="item3">
+                Ik was van plan om een rubiks cube oplosser te maken met een arduino, dat was iets te ambitieus. Ik ben toen begonnen met de oplosser zelf, de code. Ik heb snel besloten dat is hiervoor
+                Typescript (een complexere vorm van javascript met statische types) hiervoor wou gebruiken. Zo is het redelijk makkelijk om een website te maken met de oplosser, en ik kan het hergebruiken om de arduino mee te besturen via een serial monitor.
+                Ik heb tijdens mijn onderzoek een arduino cube oplosser gevonden, de code stond op github. Het was gemaakt door <a href="https://github.com/matt2uy/Cube-Solver"> github gebruiker "matt2uy"</a>. <br> <br>
+                <iframe width="600" height="300" src="https://www.youtube.com/embed/gy5B6neyWf8" title="Rubik's Cube Solver" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br> De code was erg simpel en goed leesbaar. Daarom heb ik het gebruikt als een basis voor mijn project. Ik moest deze Cpp code vertalen dus naar Typescript. Ik dacht dat dat te doen was. 
+                Als eerst wou ik een website hebben waar ik deze solver kan laten zien, dus ik ben een nieuwe website begonnen. Op deze website wou ik een 3D kubus hebben die je kan draaien en uiteindelijk op laten lossen door mijn programma. 
+                Ik heb <a href="https://github.com/brickmaker/three-rubik-cube">deze</a> website gebruikt voor de visuals. De visuals gebruiken een javascript library genaamd <a href="https://threejs.org/">Three.js</a>. 
+            Ik ben licht bekend met Threejs </p>
+            <p class="item3">
+                Na veel onderzoek op het internet en veel kijken naar projecten die hetzelfde hebben bereikt wat ik wou, heb ik ontdekt dat (bijna) alle oplossers valsspelen. Ze voeren dezelfde serie aan inputs uit die de gebruiker heeft uitgevoerd maar dan omgekeerd. 
+                Als je vier keer L doet, lossen ze de opgeloste kubus op door vier keer L` te doen. (De benaming van zetten zijn te vinden op <a href="https://ruwix.com/the-rubiks-cube/notation/">ruwix</a>.) Dat helpt mij niet, want ik wou een echte oplosser maken. 
+                Ik ben daarna gewoon begonnen met het vertalen van de oplosser. Alles werkte tot alles het niet meer deed. Ik kon geen data toevoegen aan de 'instructions' lijst in de SOLVER class. Ik heb hier 2 uur aan gewerkt tot ik het opgaf. De website is niet helemaal klaar, 
+                maar nog wel deels functioneel. <br>
+                <iframe src="https://qweri0p.github.io/RBX" frameborder="0" height="825" width="800"></iframe> <br>
+                Je bestuurt de kubus door de toetsenbord letters: q w e z x c (links, boven, voor, rechts, onder, achter). Kleine letters doen het met de klok mee, en hoofdletters tegen de klok in. De solve knop doet alleen iets in de js console.<br>
+                De code staat op <a href="https://github.com/qweri0p/RBX">https://github.com/qweri0p/RBX</a>.<br>
+                De WIP oplosser is te vinden in het "src/solve.ts" bestand als een grote class. De visuals zijn te vinden in "src/main.ts". 
+            </p>
+        </div>
+        <a href="sugoma.xyz">sugoma.xyz</a>
     </body>
 </html>
